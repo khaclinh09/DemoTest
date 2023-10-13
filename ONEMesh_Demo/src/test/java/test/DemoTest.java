@@ -1,7 +1,5 @@
 package test;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -14,7 +12,6 @@ public class DemoTest {
 WebDriver driver = new ChromeDriver();
 driver.manage().window().maximize();
 driver.get(Test1_WebInfo.meshUrl);
-driver.manage().timeouts().pageLoadTimeout(10,TimeUnit.SECONDS);
 driver.close();
 	}
 
