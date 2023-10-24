@@ -74,16 +74,10 @@ public class CommonBrowser {
 	}
 
 	public WebDriver initChromeDriver(String URL) {
-		ChromeOptions options = new ChromeOptions();
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\driver\\chromedriver.exe");
-		// options.setPageLoadStrategy(PageLoadStrategy.NONE);
-				// Instantiate the chrome driver
-		driver = new ChromeDriver(options);
-
-		// driver = new ChromeDriver();
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get(URL);
-//		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+	    driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 		return driver;
 	}
 

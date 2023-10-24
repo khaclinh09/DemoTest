@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import constants.Test1_WebInfo;
 
-public class DemoTest {
+public class Homework_Unit7 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
