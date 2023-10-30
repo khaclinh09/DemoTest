@@ -23,9 +23,9 @@ public class Homework_Unit10_2 {
 		WebElement btnLogin = driver.findElement(By.xpath("//div[@class = 'field']//button[text() = 'ĐĂNG NHẬP']"));
 		btnLogin.click();
 		cb.pause(3000);
-		//WebElement avatar = driver.findElement(By.xpath("//div[@class = 'avatar2']//i[@class = 'fa fa-caret-down']"));
-		//avatar.click();
-		//cb.pause(1000);
+		WebElement avatar = driver.findElement(By.xpath("//li[@id = 'showsub']//a[@rel = 'nofollow']"));
+		avatar.click();
+		cb.pause(1000);
 		WebElement EditProfile = driver.findElement(By.xpath("//div[@class = 'info']//a[text() = 'Chỉnh sửa thông tin']"));
 		EditProfile.click();
 		cb.pause(1000);

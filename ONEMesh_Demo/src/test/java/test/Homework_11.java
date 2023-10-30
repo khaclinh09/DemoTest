@@ -6,6 +6,9 @@ import common.CommonActions;
 import common.CommonBrowser;
 
 import org.testng.annotations.BeforeMethod;
+
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,23 +20,19 @@ public class Homework_11 {
 	CommonBrowser cb;
 	CommonActions actions;
 	WebDriver driver;
+	
 @Test	
-  public void Bai1() {
-	  WebElement btnCheckbox = driver.findElement(By.id("isAgeSelected"));
-	  cb.pause(1000);
- 
+  public void Checkbox() 
+{
+	  WebElement btnCheckbox = driver.findElement(By.xpath("//input[@type = 'checkbox']"));
+	  for (WebElement webElement : btnCheckbox){
+	  if (!webElement.isSelected()){
+		  webElement.click();
+	  }
+	}
+	  cb.pause(2000);
+}  
 	  
-	  
-	  
-  }
-  @BeforeMethod
-  public void beforeMethod() {
-  }
-
-  @AfterMethod
-  public void afterMethod() {
-  }
-
   @BeforeTest
 	  public void initBrowser() {
 			cb = new CommonBrowser();
@@ -42,7 +41,7 @@ public class Homework_11 {
 
   @AfterTest
   public void afterTest() {
-	  cb.quitDriver(driver);
+	  //cb.quitDriver(driver);
   }
 
 }
