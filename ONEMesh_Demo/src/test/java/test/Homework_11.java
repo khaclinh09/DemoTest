@@ -7,9 +7,12 @@ import common.CommonBrowser;
 
 import org.testng.annotations.BeforeMethod;
 
+import java.security.Key;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -107,8 +110,12 @@ public void BT2()
 	WebElement txtFlyingTo = driver.findElement(By.xpath("//div[@class = 'col-lg-6']//input[@placeholder = 'City or airport']"));
 	txtFlyingTo.sendKeys("Ho Chi Minh");
 	cb.pause(2000);
-	WebElement Date = driver.findElement(By.xpath("//div[@class ='col-lg-3 pr-0']//input[@name = 'daterange-single']"));
-	Date.click();
+	WebElement Date = driver.findElement(By.xpath("//label[text()='Departing']/following-sibling::div//input[@class = 'date-range form-control']"));
+	JavascriptExecutor js = (JavascriptExecutor)driver;
+	js.executeScript("argument[0].removeAttribute('readonly','readonly');",Date);
+	Date.clear();
+	Date.sendKeys("02112023");
+	Date.sendKeys(Keys.TAB);
 	cb.pause(2000);
 	WebElement Passengers = driver.findElement(By.xpath("//div[@class ='col-lg-3 pr-0']//a[@class = 'dropdown-toggle dropdown-btn']"));
 	Passengers.click();
