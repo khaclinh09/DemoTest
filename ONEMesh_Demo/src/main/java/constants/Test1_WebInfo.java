@@ -10,5 +10,5 @@ public class Test1_WebInfo {
 	public static String prodwebURL = "https://rise.fairsketch.com/signin?redirect=https://rise.fairsketch.com/events";
 	public static String bepAntoanUrl ="https://bepantoan.vn/";
 	public static String orangeUrl ="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login";
-
+	public static String aladaUrl ="https://alada.vn/tai-khoan/dang-nhap.html";
 }

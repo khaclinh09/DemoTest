@@ -18,7 +18,7 @@ public class Homework_12 {
 	WebDriver driver;
 
 	@Test
-  public void f() {
+  public void baitap12() {
 	  
 	  driver = cb.initChromeDriver("https://demo.seleniumeasy.com/input-form-demo.html");
 		Select List1 = new Select(driver.findElement(By.xpath("//select[@name = 'state']")));
