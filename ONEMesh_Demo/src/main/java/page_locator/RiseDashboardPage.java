@@ -10,6 +10,8 @@ public class RiseDashboardPage extends BasePageFactory{
 	}
 	@FindBy(xpath = "//a[contains(@href,'client')]")
 	WebElement lbkClient;
+	@FindBy(xpath = "//a[contains(@href,'all_projects')]")
+	WebElement lbkProjects;
 	
 	
 	public void ClickTabClient() {
@@ -20,17 +22,17 @@ public class RiseDashboardPage extends BasePageFactory{
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
-}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	}
+	public void ClickTabProjects() {
+	lbkProjects.click();
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
 	
 	
 	

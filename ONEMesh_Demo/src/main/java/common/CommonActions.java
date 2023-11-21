@@ -57,7 +57,7 @@ public class CommonActions {
 	}
 
 	public void sendKeys(WebElement element, String value) {
-		
+	
 		element.clear();
 		element.sendKeys(value);
 

@@ -10,6 +10,9 @@ import page_locator.RiseDashboardPage;
 import page_locator.RiseLoginPage;
 
 import org.testng.annotations.BeforeMethod;
+
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
@@ -23,6 +26,8 @@ public class Homework_15 {
 	@Test
 	public void AddClient() {
 		RiseLoginPage login = new RiseLoginPage(driver);
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		
 		login.clickLogin("admin@demo.com", "riseDemo");
 		RiseDashboardPage dashboard = new RiseDashboardPage(driver);
 		dashboard.ClickTabClient();

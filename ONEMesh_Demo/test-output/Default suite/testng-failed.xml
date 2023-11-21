@@ -3,18 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.Homework_14">
+      <class name="test.RiseAddProject">
         <methods>
-          <include name="ReLogin"/>
-          <include name="beforeMethod"/>
           <include name="afterTest"/>
-          <include name="ClickEditProfile"/>
-          <include name="Login"/>
-          <include name="EditPassword"/>
+          <include name="IntenalProject"/>
           <include name="beforeTest"/>
-          <include name="afterMethod"/>
+          <include name="ClientProject"/>
         </methods>
-      </class> <!-- test.Homework_14 -->
+      </class> <!-- test.RiseAddProject -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
